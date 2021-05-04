@@ -1,12 +1,17 @@
 REQUIREMENTS
 
+# SIMPLE PENDULUM SIMULATION
 
-# PYTHON SHOULD BE INSTALLED PREFERABLY VERSION 3.7+
-# PYGAME LIBRARY
-	# IF NOT INSTALLED DO A PIP INSTALL PYGAME ON THE COMMAND LINE.
-# PYTHON INTERPRETER
-	# AT THE TOP OF THE PYTHON FILE PEDULUM_RUNNER.py SPECIFY THE DISPLAY CONFIGURATION.
-	# PENDULUM_RUNNER.py and PENDULUM_MOVEMENT.py SHOULD BE IN SAME DIRECTORY TO WORK ELSE PROGRAM WONT RUN.
-# ig THAT'S IT :) 
+### This project is a rough simulation of a simple pendulum and contains inaccuracies like other simulations. A more accurate version is to be released soon. This project is to show the usual approach.
 
-IN CASE OF ANY PROBLEM PLEASE CONTACT ME... 
+### SOON A DOUBLE PENDULEM SIMULATION WILL ALSO BE RELEASED.
+
+
+## REQUIREMENTS :- 
+
+### Pygame library
+### Python interpreter
+### Pendulum_runner.py and Pendulum_movement.py files to be in same folder.
+### Screen Resolution settings can be changed from within the pendulum_runner.py file 
+
+IN CASE OF ANY PROBLEM PLEASE CONTACT ME...

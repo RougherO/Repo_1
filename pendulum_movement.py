@@ -1,11 +1,16 @@
 from math import sin, pi
+
 GTY = 0.0489
+
 class pendulum:
+
     def __init__(self, length, mass, theta):
         self.length = length
         self.mass = mass
         self.theta = theta
         self.a_vel = 0
+
+
     def movement(self):
         self.s = sin(self.theta)
         self.a_acc = -GTY/self.length * self.s
