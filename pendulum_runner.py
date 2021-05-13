@@ -2,7 +2,7 @@ try:
     
     import pygame
     import pendulum_movement as pm
-    from math import pi, radians
+    from math import radians
     from random import randint
 
 except Exception:
@@ -12,10 +12,10 @@ except Exception:
 pygame.init()
 p_c = dict()
 flag = 0
-a1, a2 = 1440, 1280                     #PROVIDE THE DISPLAY CONFIGURATION HERE
+a1, a2 = pygame.display.Info().current_w, pygame.display.Info().current_h                  #PROVIDE THE DISPLAY CONFIGURATION HERE
 running = True
 x_offset, y_offset = a1 // 2, a2 // 2
-
+clock = pygame.time.Clock()
 
 def run(p, *theme_col1):
     
@@ -28,10 +28,10 @@ try:
 
     for i in range(n):
 
-        print(f"\nFor pendulum {i + 1}\n")
+        print(f"For pendulum {i + 1}")
         theta = radians(float(input("Enter start angle[in degrees]: ")))
         mass = float(input("Enter mass[in kg]: "))
-        length = float(input("Enter length[in m]: ")) * 100
+        length = float(input("Enter length[in m]: ")) * 10
         p_c[i] = pm.pendulum(length, mass, theta)
 
     theme_col = input("Enter Theme[Dark, Light, RGB]:")
@@ -78,7 +78,7 @@ try:
         if flag:
             
             for i in range(3):    
-                col[i] += randint(1, 3) * ((-1) ** count[i])
+                col[i] += randint(1, 5) * ((-1) ** count[i])
                 
                 if col[i] > 255:
                     
@@ -94,14 +94,12 @@ try:
             run(p_c[i], 255 - col[0], 255 - col[1], 255 - col[2])
         
         pygame.display.update()
-        pygame.time.delay(13)
-
+        clock.tick(60)
+        
     print("Thank You for trying out my Simple Pendulum project... Will upload double pendulum too so stay tuned")
 
 except Exception as e:
     
         print(e)
         pygame.display.quit()
-        pygame.quit()
-        running = False    
-
+        pygame.quit()  
